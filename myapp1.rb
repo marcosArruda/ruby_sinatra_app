@@ -3,8 +3,10 @@ require 'sinatra'
 require 'opentracing'
 
 
-#span = OpenTracing.start_span("operation_name")
-#span.finish
+# Install rvm
+# install ruby 2.3.0
+# gem install bundler
+
 
 set :bind, '0.0.0.0'
 OpenTracing.global_tracer = OpenTracing::Tracer.new
