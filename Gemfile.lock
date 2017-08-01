@@ -1,6 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    faraday (0.12.2)
+      multipart-post (>= 1.2, < 3)
+    json (2.1.0)
+    multipart-post (2.0.0)
     mustermann (1.0.0)
     opentracing (0.3.0)
     rack (2.0.3)
@@ -14,15 +18,20 @@ GEM
       rack-protection (= 2.0.0)
       tilt (~> 2.0)
     tilt (2.0.8)
+    zipkin (0.3.0)
+      json
+      opentracing (~> 0.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  faraday
   opentracing
   rack
   rack-test
   sinatra
+  zipkin
 
 BUNDLED WITH
    1.15.3
