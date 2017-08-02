@@ -1,7 +1,7 @@
 require 'faraday'
 require 'opentracing'
 
-class TraceMiddleware < Faraday::Middleware
+class FaradayTraceMiddleware < Faraday::Middleware
   def call(env)
     span = OpenTracing.start_span("my_span")
     OpenTracing.inject(span.context, OpenTracing::FORMAT_RACK, env)
